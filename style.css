@@ -48,38 +48,49 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Yan yana 2 tane */
     grid-template-rows: 1fr 1fr;    /* Alt alta 2 tane */
-    gap: 15px;                      /* Butonlar arası boşluk */
+    gap: 20px;                      /* Butonlar arası boşluk */
+    padding: 20px;
     width: 100%;
     max-width: 400px;               /* Mobil görünüm için ideal genişlik */
 }
 
 /* Buton Tasarımları */
 .cat-btn {
+    /* Butonun boyutunu burada sabitliyoruz (Örn: Kare butonlar) */
+    width: 100%;             /* Grid sütununa tam yayılır */
+    aspect-ratio: 1 / 1;    /* Butonu tam kare yapar */
+    
     border: none;
     border-radius: 20px;
-    padding: 20px;
+    /*padding: 15px;*/
     cursor: pointer;
+    background-color: #6d8c69; /* Senin ana rengin */
+    
     display: flex;
     color: white;
     font-weight: bold;
     font-size: 1.1em;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Resim taşarsa gizler */
+    
     gap: 10px;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 /* Butonun içindeki resim ayarı */
 .cat-btn img {
-    width: 50px;  /* Resim boyutu */
-    height: 50px;
-    margin-bottom: 10px;
+    width: 100%;  /* Resim boyutu */
+    height: 100%;
+    /*margin-bottom: 10px;*/
     object-fit: contain; /* Resmin oranını bozmadan sığdırır */
 }
 
 .cat-btn span {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
+    color: white;
 }
 
 /* Hover efekti (UX için önemli!) */
