@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaia Bistro - EcoMenu</title>
+    <title>Sinestezi</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,12 +20,26 @@
         <h1 class="bistro-name">Gaia Bistro</h1>
     </header>
 
-    <nav class="categories">
-        <button onclick="displayMenu('main')">Main Courses</button>
-        <button onclick="displayMenu('drinks')">Beverages</button>
-        <button onclick="displayMenu('desserts')">Desserts</button>
-        <button onclick="displayMenu('salads')">Salads</button>
-    </nav>
+    <section class="category-wrapper">
+        <div class="category-grid">
+            <button class="cat-btn main-course" onclick="displayMenu('main')">
+                <span class="icon">🍴</span>
+                Main Courses
+            </button>
+            <button class="cat-btn beverages" onclick="displayMenu('drinks')">
+                <span class="icon">🍹</span>
+                Beverages
+            </button>
+            <button class="cat-btn desserts" onclick="displayMenu('desserts')">
+                <span class="icon">🍰</span>
+                Desserts
+            </button>
+            <button class="cat-btn salads" onclick="displayMenu('salads')">
+                <span class="icon">🥗</span>
+                Salads
+            </button>
+        </div>
+    </section>
 
     <nav class="filters" id="filters-bar" style="display:none;">
         <label><input type="checkbox" onchange="filterByCategory('vegan')"> Vegan</label>
