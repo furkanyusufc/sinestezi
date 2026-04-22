@@ -16,6 +16,51 @@ header { background: #faf3e0; padding: 20px; border-bottom: 2px solid #e0d0b0; }
 .categories button:nth-child(3) { background: #dda0dd; } /* Desserts */
 .categories button:nth-child(4) { background: #a2d2a2; } /* Salads */
 
+/* Kategori Konteynırı */
+.category-wrapper {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* 2x2 Izgara Yapısı */
+.category-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Yan yana 2 tane */
+    grid-template-rows: 1fr 1fr;    /* Alt alta 2 tane */
+    gap: 15px;                      /* Butonlar arası boşluk */
+    width: 100%;
+    max-width: 400px;               /* Mobil görünüm için ideal genişlik */
+}
+
+/* Buton Tasarımları */
+.cat-btn {
+    border: none;
+    border-radius: 15px;
+    padding: 25px 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s;
+}
+
+.cat-btn:active { transform: scale(0.95); } /* Basınca küçülme efekti */
+
+/* Renkleri Tasarımına Göre Ayarladım */
+.main-course { background-color: #6d8c69; } /* Yeşilimsi */
+.beverages   { background-color: #92b9bd; } /* Mavi/Turkuaz */
+.desserts    { background-color: #b8a3cc; } /* Morumsu */
+.salads      { background-color: #a5d6a7; } /* Açık Yeşil */
+
+.cat-btn .icon {
+    font-size: 1.5em;
+}
+
 /* Filtreler */
 .filters { padding: 10px; border-bottom: 1px solid #ddd; }
 
