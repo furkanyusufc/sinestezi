@@ -1,8 +1,28 @@
 /* Temel Ayarlar */
-body { font-family: 'Avenir', sans-serif; background: #fdfaf5; color: #333; margin: 0; text-align: center; }
+body {
+    font-family: 'Avenir', sans-serif;
+    /* Gönderdiğin resimdeki o güzel krem tonu */
+    background-color: #F4F1EA; 
+    color: #333;
+    margin: 0;
+    text-align: center;
+}
 
 /* Üst Bar ve Ağaç (Ortalanmış) */
-header { background: #faf3e0; padding: 20px; border-bottom: 2px solid #e0d0b0; }
+header {
+    background-color: #F4F1EA;
+    padding: 20px;
+    border-bottom: 1px solid #e0d0b0; /* Hafif bir çizgi ile ayırmak için */
+}
+
+/* Menü kartlarının arka planını beyaz bırakırsan, bu bej üzerinde çok şık durur */
+.menu-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03); /* Çok hafif bir gölge */
+    padding: 15px;
+}
+
 .bistro-name { color: #2d5a27; font-size: 2em; margin: 10px 0; }
 .tree-container { margin: 0 auto; text-align: center; }
 #tree-image-container { display: flex; justify-content: center; }
