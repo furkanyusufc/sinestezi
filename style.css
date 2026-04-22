@@ -1,0 +1,52 @@
+/* Temel Ayarlar */
+body { font-family: 'Avenir', sans-serif; background: #fdfaf5; color: #333; margin: 0; text-align: center; }
+
+/* Üst Bar ve Ağaç (Ortalanmış) */
+header { background: #faf3e0; padding: 20px; border-bottom: 2px solid #e0d0b0; }
+.bistro-name { color: #2d5a27; font-size: 2em; margin: 10px 0; }
+.tree-container { margin: 0 auto; text-align: center; }
+#tree-image-container { display: flex; justify-content: center; }
+.tree-container img { width: 100px; height: 100px; transition: transform 0.3s; }
+
+/* Kategori Butonları */
+.categories { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; padding: 20px; }
+.categories button { flex: 1; padding: 15px; border: none; border-radius: 10px; color: white; cursor: pointer; }
+.categories button:nth-child(1) { background: #2d5a27; } /* Main */
+.categories button:nth-child(2) { background: #87ceeb; } /* Drinks */
+.categories button:nth-child(3) { background: #dda0dd; } /* Desserts */
+.categories button:nth-child(4) { background: #a2d2a2; } /* Salads */
+
+/* Filtreler */
+.filters { padding: 10px; border-bottom: 1px solid #ddd; }
+
+/* Menü Kartları */
+#menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; padding: 15px; }
+.menu-card { background: white; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); padding: 10px; position: relative; display: flex; flex-direction: column; align-items: start; }
+.menu-card img { width: 100%; border-radius: 8px; margin-bottom: 10px; cursor: pointer; }
+.card-details { text-align: left; }
+.card-details h3 { margin: 5px 0; font-size: 1.1em; }
+.stars { color: #f1c40f; font-size: 0.9em; margin-top: 5px; }
+
+/* Şefin Tavsiyesi Butonu (Yuvarlak, Yıldızın Üzerinde) */
+.chef-rec-btn {
+    position: absolute;
+    top: 10px; /* Görselin üstünde */
+    right: 10px; /* Sağda */
+    width: 35px;
+    height: 35px;
+    background: #e67e22;
+    color: white;
+    border-radius: 50%; /* Yuvarlak */
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Sipariş Ver Alt Alanı */
+.order-area { display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: auto; }
+.price { font-weight: bold; font-size: 1.1em; }
+.order-btn { background: #2d5a27; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; }
