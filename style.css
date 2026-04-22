@@ -79,8 +79,8 @@ header {
     justify-content: center;
     overflow: hidden; /* Resim taşarsa gizler */
     
-    gap: 10px;
-    transition: transform 0.2s, box-shadow 0.2s;
+    /*gap: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;*/
 }
 
 /* Butonun içindeki resim ayarı */
