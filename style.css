@@ -65,8 +65,12 @@ header {
     /*padding: 15px;*/
     cursor: pointer;
     background-color: #6d8c69; /* Senin ana rengin */
+
+    /* İÇ BOŞLUKLARI SIFIRLAMA (En önemli satır) */
+    padding: 0;             
+    margin: 0;              /* Dış boşluğu da sıfırla */
     
-    /*display: flex;*/
+    display: flex;
     color: white;
     font-weight: bold;
     font-size: 1.1em;
@@ -85,6 +89,7 @@ header {
     height: 100%;
     /*margin-bottom: 10px;*/
     object-fit: contain; /* Resmin oranını bozmadan sığdırır */
+    display: block; /* Tarayıcıların otomatik boşluklarını engeller */
 }
 /*
 .cat-btn span {
