@@ -61,16 +61,16 @@ header {
     aspect-ratio: 1 / 1;    /* Butonu tam kare yapar */
     
     border: none;
-    border-radius: 20px;
+    /*border-radius: 20px;*/
     /*padding: 15px;*/
     cursor: pointer;
     background-color: #6d8c69; /* Senin ana rengin */
     
-    display: flex;
+    /*display: flex;*/
     color: white;
     font-weight: bold;
     font-size: 1.1em;
-    flex-direction: column;
+    /*flex-direction: column;*/
     align-items: center;
     justify-content: center;
     overflow: hidden; /* Resim taşarsa gizler */
@@ -86,13 +86,13 @@ header {
     /*margin-bottom: 10px;*/
     object-fit: contain; /* Resmin oranını bozmadan sığdırır */
 }
-
+/*
 .cat-btn span {
     font-size: 0.9rem;
     font-weight: 600;
     color: white;
 }
-
+*/
 /* Hover efekti (UX için önemli!) */
 .cat-btn:hover {
     transform: translateY(-5px);
