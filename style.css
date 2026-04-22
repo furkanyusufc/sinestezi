@@ -56,17 +56,36 @@ header {
 /* Buton Tasarımları */
 .cat-btn {
     border: none;
-    border-radius: 15px;
-    padding: 25px 10px;
+    border-radius: 20px;
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
     color: white;
     font-weight: bold;
     font-size: 1.1em;
-    cursor: pointer;
-    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    transition: transform 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Butonun içindeki resim ayarı */
+.cat-btn img {
+    width: 50px;  /* Resim boyutu */
+    height: 50px;
+    margin-bottom: 10px;
+    object-fit: contain; /* Resmin oranını bozmadan sığdırır */
+}
+
+.cat-btn span {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Hover efekti (UX için önemli!) */
+.cat-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .cat-btn:active { transform: scale(0.95); } /* Basınca küçülme efekti */
