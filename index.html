@@ -11,7 +11,7 @@
         
         <header>
             <div class="tree-container">
-                <p>Green Loyalty Programi</p>
+                <p>Green Loyalty Program</p>
                 <small>Tree Planting Progress</small>
             
                 <div id="tree-image-container">
@@ -22,18 +22,6 @@
             </div>
             </header>
         
-        <div class="category-grid">
-            <button class="cat-btn" onclick="openMenu('main')">...</button>
-        </div>
-        
-    </section>
-    
-    <section id="menu-page" style="display: none;">
-        <div class="menu-header">
-            <button onclick="goBack()" class="back-btn">⬅ Back</button>
-            <h2 id="category-title">Main Courses</h2>
-        </div>
-
         <section class="category-wrapper">
             <div class="category-grid">
                 <button class="cat-btn main-course" onclick="displayMenu('main')">
@@ -54,6 +42,14 @@
                 </button>
             </div>
         </section>
+        
+    </section>
+    
+    <section id="menu-page" style="display: none;">
+        <div class="menu-header">
+            <button onclick="goBack()" class="back-btn">⬅ Back</button>
+            <h2 id="category-title">Main Courses</h2>
+        </div>
         
         <nav class="filters" id="filters-bar" style="display:none;">
             <label><input type="checkbox" onchange="filterByCategory('vegan')"> Vegan</label>
