@@ -40,8 +40,6 @@ header {
     position: relative;     /* Şef butonu bunun içinde rahat konumlanabilsin */
     
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    
-    padding: 15px;
 }
 
 .bistro-name { color: #2d5a27; font-size: 2em; margin: 10px 0; }
