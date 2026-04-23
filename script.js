@@ -60,7 +60,9 @@ function displayMenu(categoryName) {
             
             <div class="order-area">
                 <p class="price">${item.price}</p>
-                <button class="order-btn" onclick="handleOrder()">-></button>
+                <button class="order-btn" onclick="handleOrder()">
+                    <span class="arrow-icon">→</span>
+                </button>
             </div>
             
         </div>
