@@ -132,8 +132,8 @@ header {
     position: absolute;
     /*top: 10px; /* Görselin üstünde */
     /*right: 10px; /* Sağda */
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: #e67e22;
     /*color: white;*/
     border-radius: 50%; /* Yuvarlak */
