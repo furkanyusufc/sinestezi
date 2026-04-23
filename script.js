@@ -1,3 +1,24 @@
+function openMenu(categoryName) {
+    // 1. Ana sayfayı gizle
+    document.getElementById('home-page').style.display = 'none';
+    
+    // 2. Menü sayfasını göster
+    document.getElementById('menu-page').style.display = 'block';
+    
+    // 3. Başlığı güncelle
+    document.getElementById('category-title').innerText = categoryName.toUpperCase();
+    
+    // 4. Menü içeriğini yükle (Zaten yazdığımız fonksiyon)
+    displayMenu(categoryName);
+}
+function goBack() {
+    // 1. Menü sayfasını gizle
+    document.getElementById('menu-page').style.display = 'none';
+    
+    // 2. Ana sayfayı tekrar göster
+    document.getElementById('home-page').style.display = 'block';
+}
+
 // Örnek Menü Verisi (Senin görselindeki gibi İngilizce)
 const menuItems = {
     main: [
