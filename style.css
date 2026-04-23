@@ -137,15 +137,23 @@ header {
     background: #e67e22;
     color: white;
     border-radius: 50%; /* Yuvarlak */
+    border: 2px solid white;
+    padding: 0;
     border: none;
-    cursor: pointer;
+    cursor: pointer;img
     font-size: 1.2em;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 5; /* Diğer her şeyin üstünde görünsün */
 }
-
+/* Butonun içindeki şef resmi */
+.chef-rec-btn img {
+    width: 100%; 
+    height: 100%;
+    object-fit: contain;
+}
 /* Sipariş Ver Alt Alanı */
 .order-area { display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: auto; }
 .price { font-weight: bold; font-size: 1.1em; }
