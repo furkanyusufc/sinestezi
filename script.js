@@ -60,8 +60,9 @@ function displayMenu(categoryName) {
             
             <div class="order-area">
                 <p class="price">${item.price}</p>
-                <button class="order-btn" onclick="handleOrder()">Order Now</button>
+                <button class="order-btn" onclick="handleOrder()">-></button>
             </div>
+            
         </div>
     `).join('');
 }
