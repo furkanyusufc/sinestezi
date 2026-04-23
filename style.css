@@ -180,9 +180,47 @@ header {
 }
 
 /* Sipariş Ver Alt Alanı */
-.order-area { display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: auto; }
+.order-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px 10px 10px; /* Kenarlardan boşluk */
+    margin-top: auto;
+}
 .price { font-weight: bold; font-size: 1.1em; }
-.order-btn { background: #2d5a27; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; }
+
+.order-btn {
+    width: 35px;
+    height: 35px;
+    background-color: #6d8c69; /* Senin ana yeşil tonun */
+    
+    background: #2d5a27;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1.2rem;
+}
+
+/* Üzerine gelince veya basınca tepki versin */
+.order-btn:hover {
+    background-color: #556b52;
+    transform: scale(1.1);
+}
+
+.order-btn:active {
+    transform: scale(0.9);
+}
+
+.arrow-icon {
+    line-height: 0; /* Ok işaretini tam ortalamak için */
+}
 
 /* Masaüstü için Media Query */
 @media (min-width: 768px) {
