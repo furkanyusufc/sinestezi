@@ -22,7 +22,9 @@ function displayMenu(categoryName) {
 
     grid.innerHTML = items.map(item => `
         <div class="menu-card" id="card-${item.id}">
-            <button class="chef-rec-btn" onclick="showChefRecommendation('${item.name}')">👨‍🍳</button>
+            <button class="chef-rec-btn" onclick="showChefRecommendation('${item.name}')">
+            <img src="assets/icons/chef.png" alt="Chef Choice">
+            </button>
             <img src="${item.img}" onclick="toggleIngredients('${item.id}')" alt="${item.name}">
             
             <div class="card-details">
