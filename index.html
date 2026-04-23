@@ -7,49 +7,66 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header>
-        <div class="tree-container">
-            <p>Green Loyalty Program</p>
-            <small>Tree Planting Progress</small>
+    <section id="home-page">
+        
+        <header>
+            <div class="tree-container">
+                <p>Green Loyalty Program</p>
+                <small>Tree Planting Progress</small>
             
-            <div id="tree-image-container">
-                <img id="tree-image" src="assets/tree-stages/seed.png" alt="Tree">
+                <div id="tree-image-container">
+                    <img id="tree-image" src="assets/tree-stages/seed.png" alt="Tree">
+                </div>
+                <p id="visit-count">11/20 orders placed</p>
+            
             </div>
-            <p id="visit-count">11/20 orders placed</p>
-            
-        </div>
-    </header>
-
-    <section class="category-wrapper">
+            </header>
+        
         <div class="category-grid">
-            <button class="cat-btn main-course" onclick="displayMenu('main')">
-                <img src="assets/icons/main-course.png" alt="Main Course">
-                
-            </button>
-        
-            <button class="cat-btn beverages" onclick="displayMenu('drinks')">
-                <img src="assets/icons/beverages.png" alt="Beverages">
-            </button>
-        
-            <button class="cat-btn desserts" onclick="displayMenu('desserts')">
-                <img src="assets/icons/desserts.png" alt="Desserts">
-            </button>
-        
-            <button class="cat-btn salads" onclick="displayMenu('salads')">
-                <img src="assets/icons/salads.png" alt="Salads">
-            </button>
+            <button class="cat-btn" onclick="openMenu('main')">...</button>
         </div>
+        
     </section>
+    
+    <section id="menu-page" style="display: none;">
+        <div class="menu-header">
+            <button onclick="goBack()" class="back-btn">⬅ Back</button>
+            <h2 id="category-title">Main Courses</h2>
+        </div>
 
-    <nav class="filters" id="filters-bar" style="display:none;">
-        <label><input type="checkbox" onchange="filterByCategory('vegan')"> Vegan</label>
-        <label><input type="checkbox" onchange="filterByCategory('gluten-free')"> Gluten-Free</label>
-    </label>
-    </nav>
-
-    <main id="menu-grid">
+        <section class="category-wrapper">
+            <div class="category-grid">
+                <button class="cat-btn main-course" onclick="displayMenu('main')">
+                    <img src="assets/icons/main-course.png" alt="Main Course">
+                
+                </button>
+        
+                <button class="cat-btn beverages" onclick="displayMenu('drinks')">
+                    <img src="assets/icons/beverages.png" alt="Beverages">
+                </button>
+        
+                <button class="cat-btn desserts" onclick="displayMenu('desserts')">
+                    <img src="assets/icons/desserts.png" alt="Desserts">
+                </button>
+        
+                <button class="cat-btn salads" onclick="displayMenu('salads')">
+                    <img src="assets/icons/salads.png" alt="Salads">
+                </button>
+            </div>
+        </section>
+        
+        <nav class="filters" id="filters-bar" style="display:none;">
+            <label><input type="checkbox" onchange="filterByCategory('vegan')"> Vegan</label>
+            <label><input type="checkbox" onchange="filterByCategory('gluten-free')"> Gluten-Free</label>
+        </label>
+        </nav>
+        
+        <div id="menu-grid"></div>
+        
+        <main id="menu-grid">
         </main>
+        
+    </section>
 
     <script src="script.js"></script>
 </body>
