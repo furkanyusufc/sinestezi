@@ -22,8 +22,28 @@ function goBack() {
 // Örnek Menü Verisi (Senin görselindeki gibi İngilizce)
 const menuItems = {
     main: [
-        { id: 101, name: "Grilled Salmon with Asparagus", price: "$18.50", stars: "⭐⭐⭐⭐", img: "assets/food/salmon.png", type: "non-vegan", ingredients: ["Salmon", "Asparagus", "Olive Oil", "Lemon", "Dill", "Garlic"] },
-        { id: 102, name: "Lentil & Spinach Curry", price: "$16.00", stars: "⭐⭐⭐⭐⭐", img: "assets/food/curry.png", type: "vegan", ingredients: ["Lentils", "Spinach", "Spices"] },
+        {
+            id: 101,
+            name: "Grilled Salmon",
+            isVegan: false,
+            isGlutenFree: true, // Somon glutensizdir
+            price: "$18.50",
+            stars: "⭐⭐⭐⭐",
+            img: "assets/food/salmon.png",
+            type: "non-vegan",
+            ingredients: ["Salmon", "Asparagus", "Olive Oil", "Lemon", "Dill", "Garlic"]
+        },
+        {
+            id: 102,
+            name: "Vegan Quinoa Bowl",
+            isVegan: true, 
+            isGlutenFree: true,
+            price: "$16.00",
+            stars: "⭐⭐⭐⭐⭐",
+            img: "assets/food/curry.png",
+            type: "vegan",
+            ingredients: ["Lentils", "Spinach", "Spices"]
+        },
         // Buraya 2 ana yemek daha ekle...
     ],
     drinks: [ /* İçecekler listesi buraya... */ ],
