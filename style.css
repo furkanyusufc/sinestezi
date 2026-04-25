@@ -387,7 +387,7 @@ header {
 /* ŞEF MÜHRÜ: Sol altta durması için */
 .chef-btn {
     width: 80px;      /* Butonun boyutu */
-    bottom: 60px;     /* Alttan ne kadar yukarıda (Yıldızların üstü) */
+    bottom: 50px;     /* Alttan ne kadar yukarıda (Yıldızların üstü) */
     left: 20px;       /* Soldan ne kadar içeride */
 }
 /* Tıklama efekti */
