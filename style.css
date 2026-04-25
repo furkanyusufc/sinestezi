@@ -347,3 +347,33 @@ header {
     font-size: 1.5rem;
     cursor: pointer;
 }
+.card-container {
+    position: relative; /* Bu çok önemli! Butonun bu kutu içinde kalmasını sağlar */
+    display: inline-block;
+    width: 100%;
+    max-width: 400px; /* Senin kartının genişliği */
+}
+.main-card-img {
+    width: 100%;
+    display: block; /* Altındaki boşluğu siler */
+}
+.image-button {
+    position: absolute; /* Ana resmin üzerinde serbestçe gezer */
+    
+    /* KONUM AYARI (Resmin üzerindeki yere göre değiştir) */
+    bottom: 20px;   /* Alttan ne kadar yukarıda? */
+    right: 20px;    /* Sağdan ne kadar solda? */
+    
+    /* BOYUT AYARI */
+    width: 50px;    /* Buton resminin genişliği */
+    height: auto;
+    
+    /* ETKİLEŞİM */
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Tıklayınca zıplama efekti için */
+    z-index: 10;     /* Resmin her zaman üstünde durması için */
+}
+/* Tıklama Hissi Vermek İçin */
+.image-button:active {
+    transform: scale(0.9); /* Basınca hafifçe küçülür */
+}
