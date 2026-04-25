@@ -39,38 +39,39 @@ function displayMenu(categoryName) {
     const items = menuItems[categoryName];
     const grid = document.getElementById('menu-grid');
     
-    if(!items) { grid.innerHTML = "<p>No items in this category.</p>"; return; }
+    if(!items) {
+        grid.innerHTML = "<p>No items in this category.</p>";
+        return; 
+    }
 
-    modal.innerHTML = `
-        <div class="menu-card" id="card-${item.id}">
-
-            <div class="modal-header-section">
-                <h2 class="modal-title">${item.name}</h2>
+    grid.innerHTML = items.map(item => `
+        <div class="detailed-card">
+            <div class="card-header">
+                <h2 class="card-title">${item.name}</h2>
             </div>
-            
-            <img src="${item.img}" class="modal-img">
-    
-            <div class="modal-content-grid">
-                <div class="left-side">
+
+            <img src="${item.img}" class="card-main-img">
+
+            <div class="card-bottom-section">
+                <div class="bottom-left">
                     <img src="assets/icons/chef.png" class="chef-stamp">
-                    <div class="modal-stars">${item.stars}</div>
+                    <div class="stars-row">${item.stars}</div>
                 </div>
-            
-                <div class="center-side">
-                    <h3 class="ingredients-title">Ingredients</h3>
-                    <ul class="ingredients-list-modal">
+
+                <div class="bottom-center">
+                    <h3>Ingredients</h3>
+                    <ul class="ing-list">
                         ${item.ingredients.map(ing => `<li>${ing}</li>`).join('')}
                     </ul>
                 </div>
-        
-                <div class="right-side">
-                    <span class="modal-price-tag">${item.price}</span>
-                    <button class="plus-order-btn" onclick="handleOrder()">
-                        <span>+</span>
-                    </button>
+                
+                <div class="bottom-right">
+                    <span class="price-bubble">${item.price}</span>
+                    <button class="add-btn" onclick="handleOrder()">+</button>
                 </div>
             </div>
-        `;
+        </div>
+    `).join('');
 }
 
 // Şefin Tavsiyesi Fonksiyonu (Hangi yemekle ne gider)
