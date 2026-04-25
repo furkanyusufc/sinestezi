@@ -351,7 +351,7 @@ header {
     position: relative; /* Bu çok önemli! Butonun bu kutu içinde kalmasını sağlar */
     display: inline-block;
     width: 100%;
-    max-width: 400px; /* Senin kartının genişliği */
+    max-width: 2361px; /* Senin kartının genişliği */
 }
 .main-card-img {
     width: 100%;
@@ -361,8 +361,8 @@ header {
     position: absolute; /* Ana resmin üzerinde serbestçe gezer */
     
     /* KONUM AYARI (Resmin üzerindeki yere göre değiştir) */
-    bottom: 20px;   /* Alttan ne kadar yukarıda? */
-    right: 20px;    /* Sağdan ne kadar solda? */
+    bottom: 40px;   /* Alttan ne kadar yukarıda? */
+    right: 25px;    /* Sağdan ne kadar solda? */
     
     /* BOYUT AYARI */
     width: 50px;    /* Buton resminin genişliği */
@@ -376,4 +376,21 @@ header {
 /* Tıklama Hissi Vermek İçin */
 .image-button:active {
     transform: scale(0.9); /* Basınca hafifçe küçülür */
+}
+/* Tüm butonların ortak özellikleri */
+.btn-overlay {
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    z-index: 10;
+}
+/* ŞEF MÜHRÜ: Sol altta durması için */
+.chef-btn {
+    width: 80px;      /* Butonun boyutu */
+    bottom: 60px;     /* Alttan ne kadar yukarıda (Yıldızların üstü) */
+    left: 20px;       /* Soldan ne kadar içeride */
+}
+/* Tıklama efekti */
+.btn-overlay:active {
+    transform: scale(0.9);
 }
