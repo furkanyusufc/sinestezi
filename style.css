@@ -361,7 +361,7 @@ header {
     position: absolute; /* Ana resmin üzerinde serbestçe gezer */
     
     /* KONUM AYARI (Resmin üzerindeki yere göre değiştir) */
-    bottom: 10px;   /* Alttan ne kadar yukarıda? */
+    bottom: 15px;   /* Alttan ne kadar yukarıda? */
     right: 25px;    /* Sağdan ne kadar solda? */
     
     /* BOYUT AYARI */
@@ -387,7 +387,7 @@ header {
 /* ŞEF MÜHRÜ: Sol altta durması için */
 .chef-btn {
     width: 80px;      /* Butonun boyutu */
-    bottom: 50px;     /* Alttan ne kadar yukarıda (Yıldızların üstü) */
+    bottom: 20px;     /* Alttan ne kadar yukarıda (Yıldızların üstü) */
     left: 20px;       /* Soldan ne kadar içeride */
 }
 /* Tıklama efekti */
