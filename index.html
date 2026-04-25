@@ -46,7 +46,7 @@
         
     </section>
     
-    <section id="menu-page" style="display: none;">
+    <div id="menu-page" class="detail-container" style="display: none;">
         <div class="menu-header">
             <button onclick="goBack()" class="back-btn">⬅ Back</button>
             <h2 id="category-title">Main Courses</h2>
@@ -57,13 +57,14 @@
             <label><input type="checkbox" onchange="filterByCategory('gluten-free')"> Gluten-Free</label>
         </label>
         </nav>
+
+        <div class="card-container">
+            <img src="assets/grilled-salmon-card.png" class="main-card-img">
+
+            <img src="assets/plus-icon.png" class="image-button" onclick="handleOrder()">
+        </div>
         
-        <div id="menu-grid"></div>
-        
-        <main id="menu-grid">
-        </main>
-        
-    </section>
+    </div>
 
     <script src="script.js"></script>
 </body>
