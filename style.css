@@ -230,3 +230,59 @@ header {
         padding: 40px;
     }
 }
+/* Başlık Yazı Tipi (Varsa el yazısı fontu ekle) */
+.modal-title {
+    font-family: 'Cursive', sans-serif;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Mor Fiyat Etiketi */
+.modal-price-tag {
+    background-color: #d1c4e9; /* Mor tonu */
+    color: #4a148c;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Malzemeler Listesi (Ortalı ve şık) */
+.ingredients-list-modal {
+    list-style: none;
+    padding: 0;
+    color: #777;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Şef Mührü (Sol alttaki dairesel logo) */
+.chef-stamp {
+    width: 60px;
+    opacity: 0.8;
+}
+
+/* Yuvarlak Artı Butonu (Turuncu/Kahve halka) */
+.plus-order-btn {
+    width: 45px;
+    height: 45px;
+    border: 2px solid #d35400; /* Görseldeki halka rengi */
+    background: transparent;
+    color: #d35400;
+    border-radius: 50%;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Pop-up Grid Düzeni */
+.modal-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Üç sütunlu yapı */
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
