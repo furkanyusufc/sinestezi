@@ -41,32 +41,36 @@ function displayMenu(categoryName) {
     
     if(!items) { grid.innerHTML = "<p>No items in this category.</p>"; return; }
 
-    grid.innerHTML = items.map(item => `
+    modal.innerHTML = `
         <div class="menu-card" id="card-${item.id}">
+
+            <div class="modal-header-section">
+                <h2 class="modal-title">${item.name}</h2>
+            </div>
+            
+            <img src="${item.img}" class="modal-img">
+    
+            <div class="modal-content-grid">
+                <div class="left-side">
+                    <img src="assets/icons/chef.png" class="chef-stamp">
+                    <div class="modal-stars">${item.stars}</div>
+                </div>
+            
+                <div class="center-side">
+                    <h3 class="ingredients-title">Ingredients</h3>
+                    <ul class="ingredients-list-modal">
+                        ${item.ingredients.map(ing => `<li>${ing}</li>`).join('')}
+                    </ul>
+                </div>
         
-            <button class="chef-rec-btn" onclick="showChefRecommendation('${item.name}')">
-            <img src="assets/icons/chef.png" alt="Chef Choice">
-            </button>
-            
-            <img src="${item.img}" onclick="toggleIngredients('${item.id}')" alt="${item.name}">
-            
-            <div class="card-details">
-                <h3>${item.name}</h3>
-                <div class="stars">${item.stars} <span class="review-count">(15 reviews)</span></div>
-                <div id="ingredients-${item.id}" class="ingredients-list" style="display:none;">
-                    <strong>Ingredients:</strong> ${item.ingredients.join(', ')}
+                <div class="right-side">
+                    <span class="modal-price-tag">${item.price}</span>
+                    <button class="plus-order-btn" onclick="handleOrder()">
+                        <span>+</span>
+                    </button>
                 </div>
             </div>
-            
-            <div class="order-area">
-                <p class="price">${item.price}</p>
-                <button class="order-btn" onclick="handleOrder()">
-                    <span class="arrow-icon">→</span>
-                </button>
-            </div>
-            
-        </div>
-    `).join('');
+        `;
 }
 
 // Şefin Tavsiyesi Fonksiyonu (Hangi yemekle ne gider)
