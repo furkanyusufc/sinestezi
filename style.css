@@ -399,3 +399,41 @@ header {
     bottom: 5px;     /* Alttan ne kadar yukarıda (Yıldızların üstü) */
     left: 10px;       /* Soldan ne kadar içeride */
 }
+.fixed-cart {
+    position: fixed;
+    bottom: 20px;   /* Alttan boşluk */
+    right: 20px;    /* Sağdan boşluk */
+    width: 70px;    /* Buton boyutu */
+    height: 70px;
+    background: #fff; /* Veya temanın rengi */
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;  /* Her şeyin üstünde durması için */
+    transition: transform 0.2s;
+}
+
+.fixed-cart img {
+    width: 60%;     /* İkonun buton içindeki boyutu */
+}
+
+/* Sepet sayısını gösteren küçük kırmızı daire */
+#cart-count {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    background: #ff4444;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.fixed-cart:active {
+    transform: scale(0.9);
+}
