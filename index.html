@@ -49,57 +49,66 @@
     <div id="menu-page" class="detail-container" style="display: none;">
         <div class="menu-header">
             <button onclick="goBack()" class="back-btn">⬅ Back</button>
-            <h2 id="category-title">Main Courses</h2>
+            <h2 id="category-title">Menu</h2>
         </div>
-        
+
         <nav class="filters" id="filters-bar" style="display:none;">
             <label><input type="checkbox" onchange="filterByCategory('vegan')"> Vegan</label>
             <label><input type="checkbox" onchange="filterByCategory('gluten-free')"> Gluten-Free</label>
         </label>
         </nav>
 
-        <div class="card-container">
-            <img src="assets/grilled-salmon-card.png" class="main-card-img">
-
-            <img src="assets/icons/chef.png" class="btn-overlay chef-btn" onclick="showChefTips()">
-
-            <img src="assets/icons/stars.png" class="btn-overlay stars-button" onclick="thanks()">
+        <div id="group-main" class="category-group" style="display:none;">
             
-            <img src="assets/plus-icon.png" class="image-button" onclick="handleOrder()">
-        </div>
+            <div class="card-container">
+                <img src="assets/grilled-salmon-card.png" class="main-card-img">
 
-        <div class="card-container">
-            <img src="assets/bowl.png" class="main-card-img">
+                <img src="assets/icons/chef.png" class="btn-overlay chef-btn" onclick="showChefTips()">
 
-            <img src="assets/icons/chef.png" class="btn-overlay chef-btn" onclick="showChefTips()">
-
-            <img src="assets/icons/stars.png" class="btn-overlay stars-button" onclick="thanks()">
+                <img src="assets/icons/stars.png" class="btn-overlay stars-button" onclick="thanks()">
             
-            <img src="assets/plus-icon.png" class="image-button" onclick="handleOrder()">
-        </div>
-
-        <div class="card-container">
-            <img src="assets/beef.png" class="main-card-img">
-
-            <img src="assets/icons/chef.png" class="btn-overlay chef-btn" onclick="showChefTips()">
-
-            <img src="assets/icons/stars.png" class="btn-overlay stars-button" onclick="thanks()">
+                <img src="assets/plus-icon.png" class="image-button" onclick="handleOrder()">
+            </div>
             
-            <img src="assets/plus-icon.png" class="image-button" onclick="handleOrder()">
-        </div>
+            <div class="card-container">
+                <img src="assets/bowl.png" class="main-card-img">
 
-        <div class="card-container">
-            <img src="assets/mushroom.png" class="main-card-img">
+                <img src="assets/icons/chef.png" class="btn-overlay chef-btn" onclick="showChefTips()">
 
-            <img src="assets/icons/chef.png" class="btn-overlay chef-btn" onclick="showChefTips()">
-
-            <img src="assets/icons/stars.png" class="btn-overlay stars-button" onclick="thanks()">
+                <img src="assets/icons/stars.png" class="btn-overlay stars-button" onclick="thanks()">
             
-            <img src="assets/plus-icon.png" class="image-button" onclick="handleOrder()">
-        </div>
+                <img src="assets/plus-icon.png" class="image-button" onclick="handleOrder()">
+            </div>
 
+            <div class="card-container">
+                <img src="assets/beef.png" class="main-card-img">
+
+                <img src="assets/icons/chef.png" class="btn-overlay chef-btn" onclick="showChefTips()">
+
+                <img src="assets/icons/stars.png" class="btn-overlay stars-button" onclick="thanks()">
+            
+                <img src="assets/plus-icon.png" class="image-button" onclick="handleOrder()">
+            </div>
+
+            <div class="card-container">
+                <img src="assets/mushroom.png" class="main-card-img">
+
+                <img src="assets/icons/chef.png" class="btn-overlay chef-btn" onclick="showChefTips()">
+
+                <img src="assets/icons/stars.png" class="btn-overlay stars-button" onclick="thanks()">
+            
+                <img src="assets/plus-icon.png" class="image-button" onclick="handleOrder()">
+            </div>
+        </div>
+        
+        <div id="group-drinks" class="category-group" style="display:none;">
+            <div class="card-container">
+                 <img src="assets/cola.png" class="main-card-img">
+            </div>
+        </div>
+        
     </div>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
