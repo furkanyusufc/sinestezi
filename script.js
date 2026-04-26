@@ -82,11 +82,11 @@ function goBack() {
 }
 
 // Sipariş fonksiyonu (Ağaç için)
-let visitCount = 11; // Başlangıç değeri
+let visitCount = 0; // Başlangıç değeri
 function handleOrder() {
-    visitCount++;
-    updateTreeDisplay();
-    alert("Order added! Tree progress updated.");
+    //visitCount++;
+    //updateTreeDisplay();
+    //alert("Order added! Tree progress updated.");
 }
 
 function updateTreeDisplay() {
@@ -97,6 +97,8 @@ function updateTreeDisplay() {
         treeImg.src = "assets/tree-stages/sapling.png";
     } else if(visitCount >= 20) {
         treeImg.src = "assets/tree-stages/tree.png";
+    } else if(visitCount == 0) {
+        treeImg.src = "assets/torba.png";
     }
 }
 // Örnek Menü Verisi (Senin görselindeki gibi İngilizce)
