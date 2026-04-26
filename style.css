@@ -387,10 +387,15 @@ header {
 /* ŞEF MÜHRÜ: Sol altta durması için */
 .chef-btn {
     width: 80px;      /* Butonun boyutu */
-    bottom: 20px;     /* Alttan ne kadar yukarıda (Yıldızların üstü) */
+    bottom: 40px;     /* Alttan ne kadar yukarıda (Yıldızların üstü) */
     left: 20px;       /* Soldan ne kadar içeride */
 }
 /* Tıklama efekti */
 .btn-overlay:active {
     transform: scale(0.9);
+}
+.stars-button {
+    width: 80px;      /* Butonun boyutu */
+    bottom: 5px;     /* Alttan ne kadar yukarıda (Yıldızların üstü) */
+    left: 10px;       /* Soldan ne kadar içeride */
 }
