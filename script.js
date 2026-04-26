@@ -226,11 +226,37 @@ function updateTreeDisplay() {
     }
 }
 */
+
 // Filtreleme Fonksiyonu (Bunu arkadaşın tamamlayabilir, şimdilik veganı ekledim)
-function filterByCategory(type) {
+function filterByCategory() {
+
+    const isVeganChecked = document.getElementById('vegan-checkbox').checked;
+    const isGFChecked = document.getElementById('gf-checkbox').checked;
+    const isLFChecked = document.getElementById('lf-checkbox').checked;
+    
+    // Sadece şu an açık olan kategorideki (örn: main) kartları seç
+    const activeGroup = document.querySelector('.category-group[style*="display: block"]');
+    if (!activeGroup) return;
+
+    const cards = activeGroup.querySelectorAll('.card-container');
+
+    cards.forEach(card => {
+        const isVegan = card.classList.contains('vegan');
+        const isGF = card.classList.contains('gluten-free');
+        const isLF = card.classList.contains('lactoz-free');
+        
+        // Filtreleme mantığı
+        let show = true;
+        if (isVeganChecked && !isVegan) show = false;
+        if (isGFChecked && !isGF) show = false;
+        if (isLFChecked && !isLF) show = false;
+        
+        card.style.display = show ? 'block' : 'none';
+    });
+    /*
     const activeCards = document.querySelectorAll('.menu-card');
     activeCards.forEach(card => {
         // Kartın id'sinden yemeği bul ve filtrele
         card.style.display = (type === 'all' || card.id === '...'); // Burayı arkadaşın tamamlayabilir
-    });
+    });*/
 }
