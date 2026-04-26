@@ -82,23 +82,34 @@ function goBack() {
 }
 
 // Sipariş fonksiyonu (Ağaç için)
-let visitCount = 0; // Başlangıç değeri
-function handleOrder() {
+let visitCount = 0; // Başlangıç değeri/*
+/*function handleOrder() {
     //visitCount++;
     //updateTreeDisplay();
     //alert("Order added! Tree progress updated.");
-}
+}*/
 
 function updateTreeDisplay() {
     document.getElementById('visit-count').innerText = `${visitCount}/20 Orders`;
+    
     let treeImg = document.getElementById('tree-image');
 
-    if(visitCount >= 15 && visitCount < 20) {
-        treeImg.src = "assets/tree-stages/sapling.png";
-    } else if(visitCount >= 20) {
-        treeImg.src = "assets/tree-stages/tree.png";
-    } else if(visitCount == 0) {
-        treeImg.src = "assets/torba.png";
+    // 5 Siparişte bir görsel değişimi (0, 5, 10, 15, 20)
+    if (visitCount === 0) {
+        treeImg.src = "assets/tree-stages/empty-pot.png"; // 0: Boş saksı/toprak
+    } 
+    else if (visitCount >= 5 && visitCount < 10) {
+        treeImg.src = "assets/tree-stages/seed.png";      // 5: Tohum
+    } 
+    else if (visitCount >= 10 && visitCount < 15) {
+        treeImg.src = "assets/tree-stages/sprout.png";    // 10: Filiz
+    } 
+    else if (visitCount >= 15 && visitCount < 20) {
+        treeImg.src = "assets/tree-stages/sapling.png";   // 15: Fidan
+    } 
+    else if (visitCount >= 20) {
+        treeImg.src = "assets/tree-stages/tree.png";      // 20: Tam ağaç
+        alert("Harika! Doğaya bir ağaç kazandırdınız!");
     }
 }
 // Örnek Menü Verisi (Senin görselindeki gibi İngilizce)
