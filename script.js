@@ -27,19 +27,23 @@ function handleOrder() {
     
     // 2. Ekrandaki rakamı güncelle
     document.getElementById('cart-count').innerText = cartCount;
-    
+
+    /*
     // 3. Ağaç ilerlemesini güncelle (Zaten sendeki fonksiyon)
     if (typeof visitCount !== 'undefined') {
-        visitCount++;
+        //visitCount++;
         updateTreeDisplay();
-    }
+    }*/
 
     // Hafif bir bildirim (İsteğe bağlı)
-    console.log("Sepete eklendi! Toplam: " + cartCount);
+    console.log("Sepete eklendi! Toplam sepetteki: " + cartCount);
 }
 
 function showCartDetails() {
     alert("Sepetinizde " + cartCount + " adet ürün var. Siparişi onaylıyor musunuz?");
+    visitCount++; // Her tıkta 1 artar
+    updateCartUI(); // Sepet rakamını günceller
+    updateTreeDisplay(); // Ağaç görselini kontrol eder ve günceller
 }
 
 function openMenu(categoryName) {
