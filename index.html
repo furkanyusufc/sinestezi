@@ -15,9 +15,9 @@
                 <small>Tree Planting Progress</small>
             
                 <div id="tree-image-container">
-                    <img id="tree-image" src="assets/tree-stages/seed.png" alt="Tree">
+                    <img id="tree-image" src="assets/tree-stages/empty-pot.png" alt="Tree Progress">
                 </div>
-                <p id="visit-count">11/20 orders placed</p>
+                <p id="visit-count">0/20 orders placed</p>
             
             </div>
         </header>
@@ -49,17 +49,35 @@
     <div id="menu-page" class="detail-container" style="display: none;">
         
         <button onclick="goBack()" class="back-btn">⬅ Back</button>
-        <h2 id="category-title">Main Courses</h2>
 
         <nav class="filters" id="filters-bar" style="display:none;">
-            <label><input type="checkbox" onchange="filterByCategory('vegan')"> Vegan</label>
-            <label><input type="checkbox" onchange="filterByCategory('gluten-free')"> Gluten-Free</label>
-        </label>
+            <div class="filter-item">
+                <input type="checkbox" id="vegan-checkbox" onchange="filterByCategory('vegan')">
+                <label for="vegan-checkbox" class="filter-btn">
+                    <img src="assets/icons/vegan-icon.png" alt="Vegan">
+                </label>
+            </div>
+
+            <div class="filter-item">
+                <input type="checkbox" id="gf-checkbox" onchange="filterByCategory('gluten-free')">
+                <label for="gf-checkbox" class="filter-btn">
+                    <img src="assets/icons/gf-icon.png" alt="Gluten-Free">
+                </label>
+            </div>
+
+            <div class="filter-item">
+                <input type="checkbox" id="lf-checkbox" onchange="filterByCategory('lactoz-free')">
+                <label for="lf-checkbox" class="filter-btn">
+                    <img src="assets/icons/lf-icon.png" alt="Lactoz-Free">
+                </label>
+            </div>
         </nav>
+        
+        <h2 id="category-title">Main Courses</h2>
 
         <div id="group-main" class="category-group" style="display:none;">
             
-            <div class="card-container">
+            <div class="card-container gluten-free lactoz-free">
                 <img src="assets/grilled-salmon-card.png" class="main-card-img">
 
                 <img src="assets/icons/chef.png" class="btn-overlay chef-btn" onclick="showChefTips()">
@@ -69,7 +87,7 @@
                 <img src="assets/plus-icon.png" class="image-button" onclick="handleOrder()">
             </div>
             
-            <div class="card-container">
+            <div class="card-container vegan lactoz-free gluten-free">
                 <img src="assets/bowl.png" class="main-card-img">
 
                 <img src="assets/icons/chef.png" class="btn-overlay chef-btn" onclick="showChefTips()">
@@ -101,7 +119,7 @@
         </div>
         
         <div id="group-drinks" class="category-group" style="display:none;">
-            <div class="card-container">
+            <div class="card-container vegan gluten-free lactoz-free">
                 <img src="assets/berry.png" class="main-card-img">
 
                 <img src="assets/icons/chef.png" class="btn-overlay chef-btn" onclick="showChefTips()">
@@ -111,7 +129,7 @@
                 <img src="assets/plus-icon.png" class="image-button" onclick="handleOrder()">
             </div>
 
-            <div class="card-container">
+            <div class="card-container vegan gluten-free lactoz-free">
                 <img src="assets/detox.png" class="main-card-img">
 
                 <img src="assets/icons/chef.png" class="btn-overlay chef-btn" onclick="showChefTips()">
@@ -121,7 +139,7 @@
                 <img src="assets/plus-icon.png" class="image-button" onclick="handleOrder()">
             </div>
 
-            <div class="card-container">
+            <div class="card-container vegan gluten-free lactoz-free">
                 <img src="assets/lemonade.png" class="main-card-img">
 
                 <img src="assets/icons/chef.png" class="btn-overlay chef-btn" onclick="showChefTips()">
@@ -131,7 +149,7 @@
                 <img src="assets/plus-icon.png" class="image-button" onclick="handleOrder()">
             </div>
 
-            <div class="card-container">
+            <div class="card-container gluten-free">
                 <img src="assets/milk.png" class="main-card-img">
 
                 <img src="assets/icons/chef.png" class="btn-overlay chef-btn" onclick="showChefTips()">
@@ -153,7 +171,7 @@
                 <img src="assets/plus-icon.png" class="image-button" onclick="handleOrder()">
             </div>
 
-            <div class="card-container">
+            <div class="card-container vegan gluten-free lactoz-free">
                 <img src="assets/kale.png" class="main-card-img">
 
                 <img src="assets/icons/chef.png" class="btn-overlay chef-btn" onclick="showChefTips()">
@@ -163,7 +181,7 @@
                 <img src="assets/plus-icon.png" class="image-button" onclick="handleOrder()">
             </div>
 
-            <div class="card-container">
+            <div class="card-container gluten-free">
                 <img src="assets/pesto.png" class="main-card-img">
 
                 <img src="assets/icons/chef.png" class="btn-overlay chef-btn" onclick="showChefTips()">
@@ -173,7 +191,7 @@
                 <img src="assets/plus-icon.png" class="image-button" onclick="handleOrder()">
             </div>
 
-            <div class="card-container">
+            <div class="card-container vegan gluten-free lactoz-free">
                 <img src="assets/walnut.png" class="main-card-img">
 
                 <img src="assets/icons/chef.png" class="btn-overlay chef-btn" onclick="showChefTips()">
@@ -185,7 +203,7 @@
         </div>
 
         <div id="group-desserts" class="category-group" style="display:none;">
-            <div class="card-container">
+            <div class="card-container vegan gluten-free lactoz-free">
                 <img src="assets/buddha.png" class="main-card-img">
 
                 <img src="assets/icons/chef.png" class="btn-overlay chef-btn" onclick="showChefTips()">
@@ -205,7 +223,7 @@
                 <img src="assets/plus-icon.png" class="image-button" onclick="handleOrder()">
             </div>
 
-            <div class="card-container">
+            <div class="card-container gluten-free">
                 <img src="assets/gf.png" class="main-card-img">
 
                 <img src="assets/icons/chef.png" class="btn-overlay chef-btn" onclick="showChefTips()">
@@ -215,7 +233,7 @@
                 <img src="assets/plus-icon.png" class="image-button" onclick="handleOrder()">
             </div>
 
-            <div class="card-container">
+            <div class="card-container vegan gluten-free lactoz-free">
                 <img src="assets/sorbet.png" class="main-card-img">
 
                 <img src="assets/icons/chef.png" class="btn-overlay chef-btn" onclick="showChefTips()">

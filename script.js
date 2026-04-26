@@ -27,19 +27,23 @@ function handleOrder() {
     
     // 2. Ekrandaki rakamı güncelle
     document.getElementById('cart-count').innerText = cartCount;
-    
+
+    /*
     // 3. Ağaç ilerlemesini güncelle (Zaten sendeki fonksiyon)
     if (typeof visitCount !== 'undefined') {
-        visitCount++;
+        //visitCount++;
         updateTreeDisplay();
-    }
+    }*/
 
     // Hafif bir bildirim (İsteğe bağlı)
-    console.log("Sepete eklendi! Toplam: " + cartCount);
+    console.log("Sepete eklendi! Toplam sepetteki: " + cartCount);
 }
 
 function showCartDetails() {
     alert("Sepetinizde " + cartCount + " adet ürün var. Siparişi onaylıyor musunuz?");
+    visitCount++; // Her tıkta 1 artar
+    updateCartUI(); // Sepet rakamını günceller
+    updateTreeDisplay(); // Ağaç görselini kontrol eder ve günceller
 }
 
 function openMenu(categoryName) {
@@ -48,7 +52,7 @@ function openMenu(categoryName) {
     
     // 2. Menü sayfasını göster
     document.getElementById('menu-page').style.display = 'block';
-
+    document.getElementById('filters-bar').style.display = 'flex';
     // 2. Başlığı güncelle
     const titles = {
         'main': 'MAIN COURSES',
@@ -112,6 +116,9 @@ function updateTreeDisplay() {
         alert("Harika! Doğaya bir ağaç kazandırdınız!");
     }
 }
+// Sayfa ilk yüklendiğinde 0. aşama görselini göstermek için fonksiyonu bir kez çağır
+updateTreeDisplay();
+
 // Örnek Menü Verisi (Senin görselindeki gibi İngilizce)
 const menuItems = {
     main: [
@@ -226,11 +233,37 @@ function updateTreeDisplay() {
     }
 }
 */
+
 // Filtreleme Fonksiyonu (Bunu arkadaşın tamamlayabilir, şimdilik veganı ekledim)
-function filterByCategory(type) {
+function filterByCategory() {
+
+    const isVeganChecked = document.getElementById('vegan-checkbox').checked;
+    const isGFChecked = document.getElementById('gf-checkbox').checked;
+    const isLFChecked = document.getElementById('lf-checkbox').checked;
+    
+    // Sadece şu an açık olan kategorideki (örn: main) kartları seç
+    const activeGroup = document.querySelector('.category-group[style*="display: block"]');
+    if (!activeGroup) return;
+
+    const cards = activeGroup.querySelectorAll('.card-container');
+
+    cards.forEach(card => {
+        const isVegan = card.classList.contains('vegan');
+        const isGF = card.classList.contains('gluten-free');
+        const isLF = card.classList.contains('lactoz-free');
+        
+        // Filtreleme mantığı
+        let show = true;
+        if (isVeganChecked && !isVegan) show = false;
+        if (isGFChecked && !isGF) show = false;
+        if (isLFChecked && !isLF) show = false;
+        
+        card.style.display = show ? 'block' : 'none';
+    });
+    /*
     const activeCards = document.querySelectorAll('.menu-card');
     activeCards.forEach(card => {
         // Kartın id'sinden yemeği bul ve filtrele
         card.style.display = (type === 'all' || card.id === '...'); // Burayı arkadaşın tamamlayabilir
-    });
+    });*/
 }
