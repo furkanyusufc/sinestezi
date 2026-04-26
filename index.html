@@ -52,9 +52,19 @@
         <h2 id="category-title">Main Courses</h2>
 
         <nav class="filters" id="filters-bar" style="display:none;">
-            <label><input type="checkbox" onchange="filterByCategory('vegan')"> Vegan</label>
-            <label><input type="checkbox" onchange="filterByCategory('gluten-free')"> Gluten-Free</label>
-        </label>
+            <div class="filter-item">
+                <input type="checkbox" id="vegan-checkbox" onchange="filterByCategory('vegan')">
+                <label for="vegan-checkbox" class="filter-btn">
+                    <img src="assets/icons/vegan-icon.png" alt="Vegan">
+                </label>
+            </div>
+
+            <div class="filter-item">
+                <input type="checkbox" id="gf-checkbox" onchange="filterByCategory('gluten-free')">
+                <label for="gf-checkbox" class="filter-btn">
+                    <img src="assets/icons/gf-icon.png" alt="Gluten-Free">
+                </label>
+            </div>
         </nav>
 
         <div id="group-main" class="category-group" style="display:none;">
