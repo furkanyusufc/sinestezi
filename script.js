@@ -19,6 +19,28 @@ function updateCartUI() {
     // Buraya ilerde sepet ikonundaki rakamı güncelleyen kod gelecek
     // Örn: document.getElementById('cart-count').innerText = cart.length;
 }*/
+let cartCount = 0;
+
+function handleOrder() {
+    // 1. Sayacı artır
+    cartCount++;
+    
+    // 2. Ekrandaki rakamı güncelle
+    document.getElementById('cart-count').innerText = cartCount;
+    
+    // 3. Ağaç ilerlemesini güncelle (Zaten sendeki fonksiyon)
+    if (typeof visitCount !== 'undefined') {
+        visitCount++;
+        updateTreeDisplay();
+    }
+
+    // Hafif bir bildirim (İsteğe bağlı)
+    console.log("Sepete eklendi! Toplam: " + cartCount);
+}
+
+function showCartDetails() {
+    alert("Sepetinizde " + cartCount + " adet ürün var. Siparişi onaylıyor musunuz?");
+}
 
 function openMenu(categoryName) {
     // 1. Ana sayfayı gizle
