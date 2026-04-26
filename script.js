@@ -5,11 +5,20 @@ function openMenu(categoryName) {
     // 2. Menü sayfasını göster
     document.getElementById('menu-page').style.display = 'block';
     
+    const groups = document.querySelectorAll('.category-group');
+    groups.forEach(g => g.style.display = 'none');
+
+    // 3. SADECE tıklanan kategori grubunu göster
+    const selectedGroup = document.getElementById('group-' + categoryName);
+    if(selectedGroup) {
+        selectedGroup.style.display = 'block';
+    } 
     // 3. Başlığı güncelle
     document.getElementById('category-title').innerText = categoryName.toUpperCase();
     
     // 4. Menü içeriğini yükle (Zaten yazdığımız fonksiyon)
-    displayMenu(categoryName);
+    //displayMenu(categoryName);
+    
 }
 function goBack() {
     // 1. Menü sayfasını gizle
