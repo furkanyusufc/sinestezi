@@ -4,6 +4,15 @@ function openMenu(categoryName) {
     
     // 2. Menü sayfasını göster
     document.getElementById('menu-page').style.display = 'block';
+
+    // 2. Başlığı güncelle
+    const titles = {
+        'main': 'MAIN COURSES',
+        'drinks': 'BEVERAGES',
+        'salads': 'SALADS',
+        'desserts': 'DESSERTS'
+    };
+    document.getElementById('category-title').innerText = titles[categoryName];
     
     const groups = document.querySelectorAll('.category-group');
     groups.forEach(g => g.style.display = 'none');
@@ -14,7 +23,7 @@ function openMenu(categoryName) {
         selectedGroup.style.display = 'block';
     } 
     // 3. Başlığı güncelle
-    document.getElementById('category-title').innerText = categoryName.toUpperCase();
+    //document.getElementById('category-title').innerText = categoryName.toUpperCase();
     
     // 4. Menü içeriğini yükle (Zaten yazdığımız fonksiyon)
     //displayMenu(categoryName);
@@ -28,6 +37,24 @@ function goBack() {
     document.getElementById('home-page').style.display = 'block';
 }
 
+// Sipariş fonksiyonu (Ağaç için)
+let visitCount = 11; // Başlangıç değeri
+function handleOrder() {
+    visitCount++;
+    updateTreeDisplay();
+    alert("Order added! Tree progress updated.");
+}
+
+function updateTreeDisplay() {
+    document.getElementById('visit-count').innerText = `${visitCount}/20 Orders`;
+    let treeImg = document.getElementById('tree-image');
+
+    if(visitCount >= 15 && visitCount < 20) {
+        treeImg.src = "assets/tree-stages/sapling.png";
+    } else if(visitCount >= 20) {
+        treeImg.src = "assets/tree-stages/tree.png";
+    }
+}
 // Örnek Menü Verisi (Senin görselindeki gibi İngilizce)
 const menuItems = {
     main: [
@@ -60,7 +87,7 @@ const menuItems = {
     salads: [ /* Salatalar listesi buraya... */ ]
 };
 
-let visitCount = 0; // Toplam sipariş sayacı (Green Loyalty Program)
+//let visitCount = 0; // Toplam sipariş sayacı (Green Loyalty Program)
 
 // Menüyü Listeleme Fonksiyonu
 function displayMenu(categoryName) {
@@ -117,13 +144,13 @@ function toggleIngredients(itemId) {
     const list = document.getElementById(`ingredients-${itemId}`);
     list.style.display = list.style.display === 'none' ? 'block' : 'none';
 }
-
+/*
 // Sipariş Verme ve Ağaç Büyütme (Ana sayfadaki ağacı günceller)
 function handleOrder() {
     visitCount++;
     updateTreeDisplay(); // Ağacı günceller
-}
-
+}*/
+/*
 // Ağaç Durumunu Güncelleyen Fonksiyon (Sipariş sayısına göre görseli değiştirir)
 function updateTreeDisplay() {
     document.getElementById('visit-count').innerText = `${visitCount}/20 Orders`;
@@ -141,7 +168,7 @@ function updateTreeDisplay() {
         alert("Congratulations! A tree has been planted in your name!");
     }
 }
-
+*/
 // Filtreleme Fonksiyonu (Bunu arkadaşın tamamlayabilir, şimdilik veganı ekledim)
 function filterByCategory(type) {
     const activeCards = document.querySelectorAll('.menu-card');
