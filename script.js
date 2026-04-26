@@ -1,4 +1,4 @@
-let cart = []; // Sepetteki ürünleri burada tutacağız
+/*let cart = []; // Sepetteki ürünleri burada tutacağız
 
 function handleOrder(itemName, price) {
     // 1. Ürünü sepete ekle
@@ -18,7 +18,7 @@ function updateCartUI() {
     console.log("Sepetiniz:", cart);
     // Buraya ilerde sepet ikonundaki rakamı güncelleyen kod gelecek
     // Örn: document.getElementById('cart-count').innerText = cart.length;
-}
+}*/
 
 function openMenu(categoryName) {
     // 1. Ana sayfayı gizle
