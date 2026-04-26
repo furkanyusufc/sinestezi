@@ -48,7 +48,7 @@ function openMenu(categoryName) {
     
     // 2. Menü sayfasını göster
     document.getElementById('menu-page').style.display = 'block';
-
+    document.getElementById('filters-bar').style.display = 'flex';
     // 2. Başlığı güncelle
     const titles = {
         'main': 'MAIN COURSES',
