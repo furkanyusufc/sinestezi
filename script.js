@@ -112,6 +112,9 @@ function updateTreeDisplay() {
         alert("Harika! Doğaya bir ağaç kazandırdınız!");
     }
 }
+// Sayfa ilk yüklendiğinde 0. aşama görselini göstermek için fonksiyonu bir kez çağır
+updateTreeDisplay();
+
 // Örnek Menü Verisi (Senin görselindeki gibi İngilizce)
 const menuItems = {
     main: [
