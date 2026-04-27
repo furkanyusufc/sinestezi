@@ -61,7 +61,6 @@ header {
 .gr {
     display: block;         /* Blok eleman yaparak ortalanmasını sağlarız */
     width: 120px;           /* Buradan genişliği kafana göre ayarla (Örn: 150px, 80px) */
-    height: auto;           /* Oranı koruması için auto kalsın */
     margin-bottom: 15px;    /* Yazı ile arasını açmak için boşluk */
     margin-left: auto;      /* Yatay ortalama garantisi */
     margin-right: auto;
