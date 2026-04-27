@@ -61,14 +61,13 @@ header {
 }
 .gr {
     display: block;         /* Blok eleman yaparak ortalanmasını sağlarız */
-    width: 120px;           /* Buradan genişliği kafana göre ayarla (Örn: 150px, 80px) */
-    height: 33px;
+    height: 35px;
     margin-bottom: 15px;    /* Yazı ile arasını açmak için boşluk */
     margin-left: auto;      /* Yatay ortalama garantisi */
     margin-right: auto;
 }
 #tree-image-container { display: flex; justify-content: center; }
-.tree-container img { width: 100px; height: 100px; transition: transform 0.3s; }
+.tree-imagess { width: 100px; height: 100px; transition: transform 0.3s; }
 
 /* Kategori Butonları */
 .categories { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; padding: 20px; }
