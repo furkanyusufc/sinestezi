@@ -51,9 +51,10 @@ function openMenu(categoryName) {
 function goBack() {
     // 1. Menü sayfasını gizle
     document.getElementById('menu-page').style.display = 'none';
-    
     // 2. Ana sayfayı tekrar göster
     document.getElementById('home-page').style.display = 'block';
+    // Sayfayı en yukarı kaydır ki kullanıcı en üstten başlasın
+    window.scrollTo(0, 0);
 }
 
 let visitCount = 0; // Başlangıç değeri/*
