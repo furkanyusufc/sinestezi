@@ -60,7 +60,7 @@ header {
 }
 .gr {
     display: block;         /* Blok eleman yaparak ortalanmasını sağlarız */
-    height: 18px;
+    height: 20px;
     margin-bottom: 15px;    /* Yazı ile arasını açmak için boşluk */
     margin-left: auto;      /* Yatay ortalama garantisi */
     margin-right: auto;
