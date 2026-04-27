@@ -46,6 +46,11 @@ function showCartDetails() {
     updateTreeDisplay(); // Ağaç görselini kontrol eder ve günceller
 }
 
+function updateCartUI() {
+    cartCount = 0;
+    document.getElementById('cart-count').innerText = cartCount;
+}
+
 function openMenu(categoryName) {
     // 1. Ana sayfayı gizle
     document.getElementById('home-page').style.display = 'none';
@@ -102,16 +107,16 @@ function updateTreeDisplay() {
     if (visitCount === 0) {
         treeImg.src = "assets/tree-stages/empty-pot.png"; // 0: Boş saksı/toprak
     } 
-    else if (visitCount >= 5 && visitCount < 10) {
+    else if (visitCount >= 1 && visitCount < 6) {
         treeImg.src = "assets/tree-stages/seed.png";      // 5: Tohum
     } 
-    else if (visitCount >= 10 && visitCount < 15) {
+    else if (visitCount >= 6 && visitCount < 11) {
         treeImg.src = "assets/tree-stages/sprout.png";    // 10: Filiz
     } 
-    else if (visitCount >= 15 && visitCount < 20) {
+    else if (visitCount >= 11 && visitCount < 16) {
         treeImg.src = "assets/tree-stages/sapling.png";   // 15: Fidan
     } 
-    else if (visitCount >= 20) {
+    else if (visitCount >= 16) {
         treeImg.src = "assets/tree-stages/tree.png";      // 20: Tam ağaç
         alert("Harika! Doğaya bir ağaç kazandırdınız!");
     }
