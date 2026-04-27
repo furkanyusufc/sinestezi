@@ -102,7 +102,7 @@
             <div class="card-container">
                 <img src="assets/beef.png" class="main-card-img">
 
-                <img src="assets/icons/chef.png" class="btn-overlay chef-btn" onclick="showChefTips()">
+                <img src="assets/icons/chef.png" class="btn-overlay chef-btn" onclick="showChefTips('assets/beef-tip.png')">
 
                 <img src="assets/icons/stars.png" class="btn-overlay stars-button" onclick="thanks()">
             
@@ -246,6 +246,11 @@
             </div>
         </div>
         
+    </div>
+    
+    <div id="chef-popup" style="display: none; position: fixed; top: 20%; right: 10%; z-index: 10000;">
+        <img id="tip-image" src="" style="width: 150px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        <button onclick="closeChefTip()" style="display: block; margin-top: 5px;">Kapat</button>
     </div>
     
     <script src="script.js"></script>
