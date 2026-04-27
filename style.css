@@ -408,20 +408,15 @@ header {
     left: 10px;       /* Soldan ne kadar içeride */
 }
 .fixed-cart {
-    position: fixed;
-    bottom: 20px;   /* Alttan boşluk */
-    right: 20px;    /* Sağdan boşluk */
     width: 70px;    /* Buton boyutu */
     height: 70px;
-    background: #fff; /* Veya temanın rengi */
     border-radius: 50%;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     cursor: pointer;
-    z-index: 9999;  /* Her şeyin üstünde durması için */
-    transition: transform 0.2s;
+    border: 2px solid #f0f0f0;
 }
 
 .fixed-cart img {
@@ -431,15 +426,13 @@ header {
 /* Sepet sayısını gösteren küçük kırmızı daire */
 #cart-count {
     position: absolute;
-    top: 0;
+    top: 5px;
     right: 5px;
-    background: #ff4444;
+    background: red;
     color: white;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 4px 8px;
+    font-size: 12px;
+    padding: 2px 6px;
     border-radius: 50%;
-    border: 2px solid white;
 }
 
 .fixed-cart:active {
@@ -506,4 +499,11 @@ header {
 /* Üstüne gelince veya tıklayınca */
 .back-btn:hover {
     transform: translateX(-5px); /* Hafif sola kaysın (geri hissi) */
+}
+.cart-container-siparis {
+    position: fixed;
+    bottom: 20px;      /* Alttan 20px yukarıda durur */
+    left: 50%;         /* Ekranın tam ortasına git */
+    transform: translateX(-50%); /* Kendi genişliği kadar geri kayarak tam ortalar */
+    z-index: 1000;     /* Diğer her şeyin üstünde görünmesini sağlar */
 }
