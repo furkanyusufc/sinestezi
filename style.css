@@ -487,25 +487,20 @@ header {
 /* Geri butonu konteyneri */
 .back-btn {
     position: absolute; /* Detay sayfasının içinde serbest kalsın */
-    top: 15px;          /* Üstten boşluk */
-    left: 15px;         /* Soldan boşluk */
-    width: 5px;      /* Butonun toplam genişliği */
-    height: 5px;     /* Butonun toplam yüksekliği */
+    top: 10px;          /* Üstten boşluk */
+    left: 10px;         /* Soldan boşluk */
+    width: 60px;      /* Butonun toplam genişliği */
+    height: auto;     /* Butonun toplam yüksekliği */
     background: none;   /* Arka planı sil */
     border: none;       /* Çerçeveyi sil */
-    padding: 0;         /* Boşlukları sıfırla */
     cursor: pointer;
-    z-index: 9999;        /* Yemek kartlarının üstünde kalsın */
-    transition: transform 0.2s ease; /* Küçük bir efekt */
+    z-index: 1000;        /* Yemek kartlarının üstünde kalsın */
 }
 
 /* Butonun içindeki resim */
 .back-btn img {
     width: 100%;        /* İkon boyutu */
     height: auto;
-    display: block;
-    /* Eğer ikon siyahsa ve arka plan koyuysa beyaza çevirmek için (opsiyonel): */
-    /* filter: invert(1); */
 }
 
 /* Üstüne gelince veya tıklayınca */
