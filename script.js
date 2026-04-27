@@ -176,11 +176,6 @@ function showChefTips(imagePath) {
     
     // 2. Pop-up'ı görünür yap
     popup.style.display = 'block';
-
-    // 3. 3 saniye sonra otomatik kapansın (İstersen)
-    setTimeout(() => {
-        closeChefTip();
-    }, 4000);
 }
 function closeChefTip() {
     document.getElementById('chef-popup').style.display = 'none';
