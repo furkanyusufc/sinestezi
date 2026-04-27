@@ -52,7 +52,6 @@ header {
 
 .bistro-name { color: #2d5a27; font-size: 2em; margin: 10px 0; }
 .gr {
-    position: fixed;
     left: 50%;         /* Ekranın tam ortasına git */
     transform: translateX(-50%); /* Kendi genişliği kadar geri kayarak tam ortalar */
 }
