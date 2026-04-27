@@ -417,7 +417,7 @@ header {
 }
 
 .fixed-cart img {
-    width: 60%;     /* İkonun buton içindeki boyutu */
+    width: 100%;     /* İkonun buton içindeki boyutu */
 }
 
 /* Sepet sayısını gösteren küçük kırmızı daire */
