@@ -482,7 +482,9 @@ header {
     transform: scale(1.1); /* Hafif büyüsün */
     border-color: #4CAF50; /* Yeşil bir çerçeve (veya temanın rengi) */
     box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
-}* Geri butonu konteyneri */
+}
+
+/* Geri butonu konteyneri */
 .back-btn {
     position: absolute; /* Detay sayfasının içinde serbest kalsın */
     top: 15px;          /* Üstten boşluk */
