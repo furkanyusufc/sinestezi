@@ -45,12 +45,17 @@ header {
     width: 100%;             /* Izgara genişliğine yayıl */
     aspect-ratio: 1 / 1;    /* Genişlik neyse yüksekliği ona eşitle */
     
-    position: relative;     /* Şef butonu bunun içinde rahat konumlanabilsin */
+    position: relative;     
     
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .bistro-name { color: #2d5a27; font-size: 2em; margin: 10px 0; }
+.gr {
+    position: fixed;
+    left: 50%;         /* Ekranın tam ortasına git */
+    transform: translateX(-50%); /* Kendi genişliği kadar geri kayarak tam ortalar */
+}
 .tree-container { margin: 0 auto; text-align: center; }
 #tree-image-container { display: flex; justify-content: center; }
 .tree-container img { width: 100px; height: 100px; transition: transform 0.3s; }
