@@ -484,8 +484,8 @@ header {
 }* Geri butonu konteyneri */
 .back-btn {
     position: absolute; /* Detay sayfasının içinde serbest kalsın */
-    top: 20px;          /* Üstten boşluk */
-    left: 20px;         /* Soldan boşluk */
+    top: 15px;          /* Üstten boşluk */
+    left: 15px;         /* Soldan boşluk */
     background: none;   /* Arka planı sil */
     border: none;       /* Çerçeveyi sil */
     padding: 0;         /* Boşlukları sıfırla */
