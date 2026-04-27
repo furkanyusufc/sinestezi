@@ -51,11 +51,23 @@ header {
 }
 
 .bistro-name { color: #2d5a27; font-size: 2em; margin: 10px 0; }
-.gr {
-    left: 50%;         /* Ekranın tam ortasına git */
-    transform: translateX(-50%); /* Kendi genişliği kadar geri kayarak tam ortalar */
+
+.tree-container {
+    display: flex;
+    flex-direction: column; /* İçerikleri alt alta dizer */
+    align-items: center;    /* Yatayda her şeyi ortalar */
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
 }
-.tree-container { margin: 0 auto; text-align: center; }
+.gr {
+    display: block;         /* Blok eleman yaparak ortalanmasını sağlarız */
+    width: 120px;           /* Buradan genişliği kafana göre ayarla (Örn: 150px, 80px) */
+    height: auto;           /* Oranı koruması için auto kalsın */
+    margin-bottom: 15px;    /* Yazı ile arasını açmak için boşluk */
+    margin-left: auto;      /* Yatay ortalama garantisi */
+    margin-right: auto;
+}
 #tree-image-container { display: flex; justify-content: center; }
 .tree-container img { width: 100px; height: 100px; transition: transform 0.3s; }
 
