@@ -16,6 +16,7 @@ header {
 }
 
 #menu-page {
+    position: relative
     animation: slideIn 0.3s ease-out;
 }
 
