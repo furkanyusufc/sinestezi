@@ -107,16 +107,16 @@ function updateTreeDisplay() {
     if (visitCount === 0) {
         treeImg.src = "assets/tree-stages/empty-pot.png"; // 0: Boş saksı/toprak
     } 
-    else if (visitCount >= 1 && visitCount < 6) {
+    else if (visitCount >= 1 && visitCount < 7) {
         treeImg.src = "assets/tree-stages/seed.png";      // 5: Tohum
     } 
-    else if (visitCount >= 6 && visitCount < 11) {
+    else if (visitCount >= 7 && visitCount < 13) {
         treeImg.src = "assets/tree-stages/sprout.png";    // 10: Filiz
     } 
-    else if (visitCount >= 11 && visitCount < 16) {
+    else if (visitCount >= 13 && visitCount < 20) {
         treeImg.src = "assets/tree-stages/sapling.png";   // 15: Fidan
     } 
-    else if (visitCount >= 16) {
+    else if (visitCount === 20) {
         treeImg.src = "assets/tree-stages/tree.png";      // 20: Tam ağaç
         alert("Harika! Doğaya bir ağaç kazandırdınız!");
     }
