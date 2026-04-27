@@ -56,7 +56,6 @@ header {
     display: flex;
     flex-direction: column; /* İçerikleri alt alta dizer */
     align-items: center;    /* Yatayda her şeyi ortalar */
-    margin: 0 auto;
     text-align: center;
     padding: 20px;
 }
