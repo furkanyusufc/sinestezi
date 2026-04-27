@@ -1,13 +1,9 @@
 let cartCount = 0;
 
 function handleOrder() {
-    // 1. Sayacı artır
+    
     cartCount++;
-    
-    // 2. Ekrandaki rakamı güncelle
     document.getElementById('cart-count').innerText = cartCount;
-    
-    // Hafif bir bildirim (İsteğe bağlı)
     console.log("Sepete eklendi! Toplam sepetteki: " + cartCount);
 }
 
