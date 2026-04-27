@@ -272,3 +272,21 @@ function filterByCategory() {
         card.style.display = (type === 'all' || card.id === '...'); // Burayı arkadaşın tamamlayabilir
     });*/
 }
+function showChefTips(imagePath) {
+    const popup = document.getElementById('chef-popup');
+    const tipImg = document.getElementById('tip-image');
+    
+    // 1. Gelen resim yolunu <img> etiketine bas
+    tipImg.src = imagePath;
+    
+    // 2. Pop-up'ı görünür yap
+    popup.style.display = 'block';
+
+    // 3. 3 saniye sonra otomatik kapansın (İstersen)
+    setTimeout(() => {
+        closeChefTip();
+    }, 4000);
+}
+function closeChefTip() {
+    document.getElementById('chef-popup').style.display = 'none';
+}
