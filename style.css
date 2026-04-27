@@ -474,7 +474,28 @@ header {
     transform: scale(1.1); /* Hafif büyüsün */
     border-color: #4CAF50; /* Yeşil bir çerçeve (veya temanın rengi) */
     box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}* Geri butonu konteyneri */
+.back-btn {
+    position: absolute; /* Detay sayfasının içinde serbest kalsın */
+    top: 20px;          /* Üstten boşluk */
+    left: 20px;         /* Soldan boşluk */
+    background: none;   /* Arka planı sil */
+    border: none;       /* Çerçeveyi sil */
+    padding: 0;         /* Boşlukları sıfırla */
+    cursor: pointer;
+    z-index: 10;        /* Yemek kartlarının üstünde kalsın */
+    transition: transform 0.2s ease; /* Küçük bir efekt */
 }
-.back-button {
-    
+
+/* Butonun içindeki resim */
+.back-btn img {
+    width: 40px;        /* İkon boyutu */
+    height: auto;
+    /* Eğer ikon siyahsa ve arka plan koyuysa beyaza çevirmek için (opsiyonel): */
+    /* filter: invert(1); */
+}
+
+/* Üstüne gelince veya tıklayınca */
+.back-btn:hover {
+    transform: translateX(-5px); /* Hafif sola kaysın (geri hissi) */
 }
