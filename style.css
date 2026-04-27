@@ -487,8 +487,8 @@ header {
     position: absolute; /* Detay sayfasının içinde serbest kalsın */
     top: 15px;          /* Üstten boşluk */
     left: 15px;         /* Soldan boşluk */
-    width: 45px;      /* Butonun toplam genişliği */
-    height: 45px;     /* Butonun toplam yüksekliği */
+    width: 5px;      /* Butonun toplam genişliği */
+    height: 5px;     /* Butonun toplam yüksekliği */
     background: none;   /* Arka planı sil */
     border: none;       /* Çerçeveyi sil */
     padding: 0;         /* Boşlukları sıfırla */
